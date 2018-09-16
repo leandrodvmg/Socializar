@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    
+    <style>
+		svg {
+		  display: block !important;		  
+		  margin: 3em auto !important;
+		  height: 50vh !important;
+		  width: 50vw !important;
+		}
+
+		td {
+		  padding-top: 5vh;
+		  padding-right: 10vw;
+		}
+
+		
+    </style>
+    
+    <title>CAPACITAR</title>
+</head>
+
+<body>
+	
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">&nbsp;</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		</div>
+	</div>
+</nav>
+	
+	<h1 class="text-center text-Medium">COLORA O DESENHO</h1>
+	<div >		
+		<table>
+			<tbody>
+				<tr>
+				<td id="#3a98f9">&nbsp;</td>
+				<td id="#3d8f1e">&nbsp;</td>
+				<td id="#6a3dcc">&nbsp;</td>
+				<td id="#f19837">&nbsp;</td>
+				<td id="#ea412c">&nbsp;</td>
+				
+				<td id="#fef84a">&nbsp;</td>
+				<td id="#66330f">&nbsp;</td>
+				<td id="#cccccc">&nbsp;</td>
+				<td id="#f7cbcb">&nbsp;</td>
+				<td id="#000000">&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+<output id="drawing">
+  
+</output>
+	
+	<p class="margin10 text-center text-Medium"><a href="m4_2.html">PRÓXIMO</a></p>
+	
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/audio.js"></script>
+    <script type="text/javascript" src="js/connect.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+	<audio id="audio1" src="audios/encontre-o.mp3"></audio>
+	<audio id="audio2" src="audios/seu-nome.mp3"></audio>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var color = "#FF0000";
+			var draw_image = "img/imgs/peixe.svg";
+			$('tr > td').each(function() {
+				$(this).css("background-color", $(this).attr('id'));
+			});
+			
+			$("td").on("click",function(){
+				  color = $(this).attr('id');
+			});
+			
+			var $drawing = $('#drawing');
+
+			$drawing.load(draw_image);
+
+			$drawing.click(function(event) {
+			  event.target.style.fill = color;
+			});
+
+		});  
+	</script>
+	<script type="text/javascript">
+		navBar(); // include navigation bar
+	</script>    
+</body>
+
+</html>

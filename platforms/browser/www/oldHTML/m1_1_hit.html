@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <title>CAPACITAR</title>
+</head>
+
+<body style="background-color:#F3F4F5">
+	
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">INÏCIO</a></li>
+        <li><a href="#">ATIVIDADES</a></li>
+      </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">SAIR</a></li>
+    </ul>
+    </div>
+  </div>
+</nav>
+		
+	<div class="alert alert-dismissible alert-success text-large" style="display-inline">
+		<p class="text-center"><img src="img/parabens_2.png" width="14%">&nbsp;PARABÉNS&nbsp;<img src="img/parabens.ico" width="14%"></p>
+		<p class="text-center">VOCÊ ACERTOU.</p>
+	</div>
+	<div class="text-center"><img src="img/parabens.jpg" width="80%"></div>
+	
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/audio.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+<audio id="audio1" src="audios/audio_telefone.mp3"></audio>
+	    
+    
+	<script>
+		
+		setTimeout(function(){ parabenizar(); }, 2000);
+		
+		function parabenizar() {
+			document.getElementById("audio1").play();
+		}
+				
+		$('#audio1').on('ended', function() {
+		   window.location.replace("m1_2.html");
+		});	
+	</script>
+</body>
+
+</html>

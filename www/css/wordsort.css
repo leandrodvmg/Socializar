@@ -1,0 +1,25 @@
+.word {
+    /*margin: 10px;
+    width: 100%;
+    height: 20px;*/
+    
+    margin: 0 8vw 0 10vw;
+	width: 100%;
+}
+.word > div {
+    font-family:"Arial","Verdana";
+    width: 25vw;
+    height: auto;
+    line-height: auto;
+    background-color: #CDE;
+    float: left;
+    margin: 5% 4px 8% 4px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 20vw !important;
+}
+.word > div:active {
+    background-color: #DCC;
+
+}

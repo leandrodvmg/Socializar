@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/puzzle.css" />
+    <link rel="stylesheet" type="text/css" href="css/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="css/grids-responsive-min.css">
+    
+    <title>CAPACITAR</title>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">&nbsp;</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		</div>
+	</div>
+</nav>
+	
+	<h1 class="text-center margin5 text-large">MONTE O QUEBRA-CABEÇA</h1>
+		
+	<div id="puzzle-containment" style="border-top: 1px solid #eee;border-bottom:1px solid #eee;background:#fafafa;margin:30px 0;padding:10px;text-align:center">
+        <div class="pure-g" style="max-width:1280px;margin:auto">
+            <div class="pure-u-1 pure-u-md-1-2"><div style="margin:10px">
+                <img id="source_image" class="pure-img" src="img/carnaval.png">
+            </div></div>
+            <div class="pure-u-1 pure-u-md-1-2">
+                <div id="pile" style="margin:10px">
+                   <div id="puzzle_solved" style="display:none;text-align:center;position:relative;top:25%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch-0.2.3.min.js"></script>
+    <script type="text/javascript" src="js/puzzle_m3.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/m3_1.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+	<script type="text/javascript">
+		navBar(); // include navigation bar
+	</script>
+	    
+</body>
+
+</html>

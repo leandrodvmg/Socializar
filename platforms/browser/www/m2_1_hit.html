@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/digital.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <title>CAPACITAR</title>
+</head>
+
+<body style="background-color:#F3F4F5">
+	
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">INÏCIO</a></li>
+        <li><a href="#">ATIVIDADES</a></li>
+      </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">SAIR</a></li>
+    </ul>
+    </div>
+  </div>
+</nav>
+		
+	<div class="alert alert-dismissible alert-success text-large" style="display-inline">
+		<p class="text-center"><img src="img/parabens_2.png" width="14%">&nbsp;PARABÉNS&nbsp;<img src="img/parabens.ico" width="14%"></p>
+		<p class="text-center">VOCÊ ACERTOU.</p>
+	</div>
+	
+	
+<!--<div class="list-group" style="margin-top:15% !important">
+  <span href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+    <div class="d-flex w-100 justify-content-between">
+		<div id="time-container">
+			<p id="time"></p>
+		</div>
+    </div>
+  </span> 
+</div>-->
+<!--<div class="row">
+	<p id="clock">
+		<img src="img/clock.png" width="300vw">
+	</p>
+	<p id="time"></p>
+</div>-->
+
+<div class='clock-wrapper'>
+  <div class='bg'></div>
+  <div class='knob'></div>
+  <div class='knob-lines' id='knob-lines'>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+    <div class='knob-line'></div>
+  </div>
+  <div class='btn' id='ampm' style="display: none;"></div>
+  <div class='btn radio-btn' id='radio-btn' style="display: none;">
+    <span>radio</span>
+  </div>
+  <div class='logo' style="display: none;">Ika</div>
+  <div class='minutes'>
+    <div class='dizaines'>
+      <div class='number' id='minutes-dizaines-0'>
+        <div class='up'>
+          <div class='digit'>0</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>0</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-dizaines-1'>
+        <div class='up'>
+          <div class='digit'>1</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>1</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-dizaines-2'>
+        <div class='up'>
+          <div class='digit'>2</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>2</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-dizaines-3'>
+        <div class='up'>
+          <div class='digit'>3</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>3</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-dizaines-4'>
+        <div class='up'>
+          <div class='digit'>4</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>4</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-dizaines-5'>
+        <div class='up'>
+          <div class='digit'>5</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>5</div>
+        </div>
+      </div>
+    </div>
+    <div class='unites'>
+      <div class='number' id='minutes-unites-0'>
+        <div class='up'>
+          <div class='digit'>0</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>0</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-unites-1'>
+        <div class='up'>
+          <div class='digit'>1</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>1</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-unites-2'>
+        <div class='up'>
+          <div class='digit'>2</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>2</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-unites-3'>
+        <div class='up'>
+          <div class='digit'>3</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>3</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-unites-4'>
+        <div class='up'>
+          <div class='digit'>4</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>4</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-unites-5'>
+        <div class='up'>
+          <div class='digit'>5</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>5</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-unites-6'>
+        <div class='up'>
+          <div class='digit'>6</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>6</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-unites-7'>
+        <div class='up'>
+          <div class='digit'>7</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>7</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-unites-8'>
+        <div class='up'>
+          <div class='digit'>8</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>8</div>
+        </div>
+      </div>
+      <div class='number' id='minutes-unites-9'>
+        <div class='up'>
+          <div class='digit'>9</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>9</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='hours'>
+    <div class='dizaines'>
+      <div class='number' id='hours-dizaines-0'>
+        <div class='up'>
+          <div class='digit'>0</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>0</div>
+        </div>
+      </div>
+      <div class='number' id='hours-dizaines-1'>
+        <div class='up'>
+          <div class='digit'>1</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>1</div>
+        </div>
+      </div>
+    </div>
+    <div class='unites'>
+      <div class='number' id='hours-unites-0'>
+        <div class='up'>
+          <div class='digit'>0</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>0</div>
+        </div>
+      </div>
+      <div class='number' id='hours-unites-1'>
+        <div class='up'>
+          <div class='digit'>1</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>1</div>
+        </div>
+      </div>
+      <div class='number' id='hours-unites-2'>
+        <div class='up'>
+          <div class='digit'>2</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>2</div>
+        </div>
+      </div>
+      <div class='number' id='hours-unites-3'>
+        <div class='up'>
+          <div class='digit'>3</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>3</div>
+        </div>
+      </div>
+      <div class='number' id='hours-unites-4'>
+        <div class='up'>
+          <div class='digit'>4</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>4</div>
+        </div>
+      </div>
+      <div class='number' id='hours-unites-5'>
+        <div class='up'>
+          <div class='digit'>5</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>5</div>
+        </div>
+      </div>
+      <div class='number' id='hours-unites-6'>
+        <div class='up'>
+          <div class='digit'>6</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>6</div>
+        </div>
+      </div>
+      <div class='number' id='hours-unites-7'>
+        <div class='up'>
+          <div class='digit'>7</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>7</div>
+        </div>
+      </div>
+      <div class='number' id='hours-unites-8'>
+        <div class='up'>
+          <div class='digit'>8</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>8</div>
+        </div>
+      </div>
+      <div class='number' id='hours-unites-9'>
+        <div class='up'>
+          <div class='digit'>9</div>
+        </div>
+        <div class='down'>
+          <div class='digit'>9</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='seconds-wrapper' style="display: none;">
+    <div class='seconds' id='seconds'>
+      <div class='second'>0</div>
+      <div class='second'>1</div>
+      <div class='second'>2</div>
+      <div class='second'>3</div>
+      <div class='second'>4</div>
+      <div class='second'>5</div>
+      <div class='second'>6</div>
+      <div class='second'>7</div>
+      <div class='second'>8</div>
+      <div class='second'>9</div>
+      <div class='second'>10</div>
+      <div class='second'>11</div>
+      <div class='second'>12</div>
+      <div class='second'>13</div>
+      <div class='second'>14</div>
+      <div class='second'>15</div>
+      <div class='second'>16</div>
+      <div class='second'>17</div>
+      <div class='second'>18</div>
+      <div class='second'>19</div>
+      <div class='second'>20</div>
+      <div class='second'>21</div>
+      <div class='second'>22</div>
+      <div class='second'>23</div>
+      <div class='second'>24</div>
+      <div class='second'>25</div>
+      <div class='second'>26</div>
+      <div class='second'>27</div>
+      <div class='second'>28</div>
+      <div class='second'>29</div>
+      <div class='second'>30</div>
+      <div class='second'>31</div>
+      <div class='second'>32</div>
+      <div class='second'>33</div>
+      <div class='second'>34</div>
+      <div class='second'>35</div>
+      <div class='second'>36</div>
+      <div class='second'>37</div>
+      <div class='second'>38</div>
+      <div class='second'>39</div>
+      <div class='second'>40</div>
+      <div class='second'>41</div>
+      <div class='second'>42</div>
+      <div class='second'>43</div>
+      <div class='second'>44</div>
+      <div class='second'>45</div>
+      <div class='second'>46</div>
+      <div class='second'>47</div>
+      <div class='second'>48</div>
+      <div class='second'>49</div>
+      <div class='second'>50</div>
+      <div class='second'>51</div>
+      <div class='second'>52</div>
+      <div class='second'>53</div>
+      <div class='second'>54</div>
+      <div class='second'>55</div>
+      <div class='second'>56</div>
+      <div class='second'>57</div>
+      <div class='second'>58</div>
+      <div class='second'>59</div>
+    </div>
+  </div>
+</div>
+	
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/audio.js"></script>
+	<script type="text/javascript" src="js/digital.js"></script>    
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+	<audio id="audio1" src="audios/parabens.mp3"></audio>
+	<audio id="audio2" src="audios/voce-acertou.mp3"></audio>
+
+	<script type="text/javascript">
+
+		setTimeout(function(){ textToAudio(); }, 600);
+		
+		function textToAudio() {
+			document.getElementById("audio1").play();
+		}
+				
+		$('#audio1').on('ended', function() {
+		   document.getElementById("audio2").play();
+		});	
+		
+		$('#audio2').on('ended', function() {
+		   window.location.replace("m1_2.html");
+		});
+		
+		$('#audio2').on('ended', function() {
+		   window.location.replace("m2_2.html");
+		});
+		
+	</script>
+	    
+</body>
+
+</html>

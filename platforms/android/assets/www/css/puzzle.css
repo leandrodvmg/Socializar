@@ -1,0 +1,8 @@
+.snappuzzle-wrap { position: relative; display: block; }
+.snappuzzle-pile { position: relative; }
+.snappuzzle-piece { cursor: move; }
+.snappuzzle-slot { position: absolute; background: #fff; opacity: .8; }
+.snappuzzle-slot-hover { background: #eee; }
+
+.pure-button { margin: 5px 0; text-decoration: none !important; }
+.button-lg { margin: 5px 0; padding: .65em 1.6em; font-size: 105%; }
